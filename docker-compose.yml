@@ -1,0 +1,17 @@
+version: '3'
+services:
+  patxi:
+    image: patxi:dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: patxi-dev-container
+    hostname: patxi
+
+      
+  osrm:
+    image: osrm/osrm-backend:latest
+    container_name: osrm-server
+    hostname: osrm
+    command: osrm-routed /data/${OSRM_FILE}.osrm

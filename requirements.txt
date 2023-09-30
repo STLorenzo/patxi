@@ -1,0 +1,4 @@
+pandas
+geopandas
+dask
+dask-geopandas
